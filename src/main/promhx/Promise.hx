@@ -9,7 +9,7 @@ import promhx.base.EventLoop;
 import promhx.base.AsyncBase;
 import promhx.error.PromiseError;
 
-@:expose
+#if !jsImport @:expose #end
 class Promise<T> extends AsyncBase<T>{
     var _rejected   : Bool;
 
