@@ -1,7 +1,7 @@
 package promhx;
 import promhx.base.AsyncBase;
 
-@:expose
+#if !jsImport @:expose #end
 class Deferred<T> extends AsyncBase<T> {
 
     public function new() super();

@@ -9,7 +9,7 @@ import promhx.base.EventLoop;
 import promhx.base.AsyncBase;
 import haxe.ds.Option;
 
-@:expose
+#if !jsImport @:expose #end
 class Stream<T> extends AsyncBase<T> {
     var deferred      : Deferred<T>;
     var _pause        : Bool;

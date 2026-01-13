@@ -1,7 +1,7 @@
 
 package promhx;
 
-@:expose
+#if !jsImport @:expose #end
 class PublicStream<T> extends Stream<T> {
     public function new(?def : Deferred<T>#if debug ,?pos:haxe.PosInfos #end){
         super(def #if debug ,pos #end);
